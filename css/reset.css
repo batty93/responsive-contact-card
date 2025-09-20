@@ -2,9 +2,87 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box; /* Ensure consistent box-sizing for all elements */
+    box-sizing: border-box;
+    /* Ensure consistent box-sizing for all elements */
     margin: 0;
     padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    /* horizontal center */
+    align-items: center;
+    /* vertical center (BONUS) */
+    min-height: 100vh;
+    /* ensures full viewport height */
+}
+
+/* ========== Contact Card ========== */
+.contact-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+    width: 90%;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+.name {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.title {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.phone,
+.company {
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* ========== Media Queries ========== */
+
+/* Breakpoint 1: screens larger than 600px */
+@media (min-width: 600px) {
+    .contact-card {
+        max-width: 400px;
+        padding: 30px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Breakpoint 2: screens larger than 900px */
+@media (min-width: 900px) {
+    .contact-card {
+        max-width: 500px;
+    }
+
+    .name {
+        font-size: 2em;
+    }
 }
 
 /* Remove default bullet styles for lists */
@@ -21,10 +99,13 @@ a {
 
 /* Set a consistent base font size and line-height */
 html {
-    font-size: 100%; /* 16px as default, adjust as needed */
+    font-size: 100%;
+    /* 16px as default, adjust as needed */
     line-height: 1.5;
-    -webkit-text-size-adjust: 100%; /* Prevent text resizing on mobile */
-    scroll-behavior: smooth; /* Smooth scrolling */
+    -webkit-text-size-adjust: 100%;
+    /* Prevent text resizing on mobile */
+    scroll-behavior: smooth;
+    /* Smooth scrolling */
 }
 
 /* Ensure consistent appearance of media elements */
@@ -42,7 +123,8 @@ input,
 button,
 textarea,
 select {
-    font: inherit; /* Inherit font styles from body */
+    font: inherit;
+    /* Inherit font styles from body */
     border: none;
     background: none;
     outline: none;
@@ -56,14 +138,16 @@ button {
 /* Set a consistent default for body */
 body {
     min-height: 100vh;
-    text-rendering: optimizeSpeed; /* Enhance text rendering for better performance */
+    text-rendering: optimizeSpeed;
+    /* Enhance text rendering for better performance */
     line-height: 1.5;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Ensure consistent focus styles for accessibility */
 :focus-visible {
-    outline: 2px dashed #000; /* Customize to suit your design */
+    outline: 2px dashed #000;
+    /* Customize to suit your design */
 }
 
 /* Remove all animations and transitions for users who prefer reduced motion */

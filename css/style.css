@@ -1,0 +1,141 @@
+/* Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.contact-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    max-width: 300px;
+    width: 100%;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    margin: 0 auto;
+}
+
+.name {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.title {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.phone,
+.company {
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0;
+}
+
+
+@media (min-width: 300px) {
+    .contact-card {
+        max-width: 600px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details-wrapper {
+        display: flex;
+        gap: 20px;
+        margin-top: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .details-wrapper>p {
+        flex: 1;
+        min-width: 200px;
+        background: #f9f9f9;
+        padding: 10px;
+        border-radius: 8px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .contact-card {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        max-width: 900px;
+    }
+
+    .profile-image {
+        margin-right: 30px;
+    }
+
+    .details-wrapper {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 0;
+        flex: 1;
+    }
+
+    .details-wrapper>p {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-card {
+        flex-direction: row;
+
+        align-items: center;
+        text-align: left;
+        max-width: 900px;
+    }
+
+    .profile-image {
+        margin: 0 30px 0 0;
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .details-wrapper {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .details-wrapper>p {
+        width: 100%;
+        min-width: auto;
+    }
+}
